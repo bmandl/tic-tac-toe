@@ -1,5 +1,5 @@
-import React, { Children, useState } from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledCell = styled.div`
   background: white;
@@ -10,21 +10,19 @@ const StyledCell = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 3em;
-  color: ${props => props.children === 'X'? 'blue' : 'tomato'};
+  color: ${(props) => (props.children === 'X' ? 'blue' : 'tomato')};
 
-  @media(min-width: 350px) {
+  @media (min-width: 350px) {
     font-size: 4em;
     flex: 0 1 32%;
     height: 100px;
   }
-`
+`;
 
-const Cell = ({ cellClicked, children, id }) => {
-  return (
-    <StyledCell id={id} onClick={cellClicked}>
-      {children}
-    </StyledCell>
-  )
-}
+const Cell = ({ cellClicked, children, id }) => (
+  <StyledCell id={id} onClick={cellClicked}>
+    {children}
+  </StyledCell>
+);
 
-export default Cell
+export default Cell;

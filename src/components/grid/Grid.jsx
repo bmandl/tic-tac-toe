@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Cell from './components/Cell/Cell'
+import React from 'react';
+import styled from 'styled-components';
+import Cell from './components/Cell/Cell';
 
 const StyledMatrix = styled.div`
   margin-top: 20px;
@@ -11,13 +11,13 @@ const StyledMatrix = styled.div`
   padding: 2px;
   width: 90vw;
 
-  @media(min-width: 350px) {
+  @media (min-width: 350px) {
     width: 312px;
   }
-`
+`;
 
-const Grid = ({ cellClicked, cells, isX }) => {
-  const matrix = new Array(9).fill()
+const Grid = ({ cellClicked, cells }) => {
+  const matrix = new Array(9).fill();
 
   return (
     <StyledMatrix>
@@ -27,7 +27,7 @@ const Grid = ({ cellClicked, cells, isX }) => {
         </Cell>
       ))}
     </StyledMatrix>
-  )
-}
+  );
+};
 
-export default Grid
+export default Grid;
